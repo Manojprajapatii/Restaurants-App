@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/bottom_all_donation"
+        android:title="Left Manu"
+
+        />
+    <item
+        android:id="@+id/bottom_plus"
+        android:title="Offers"
+
+       />
+    <item
+        android:id="@+id/bottom_home"
+        android:title=""
+
+        />
+    <item
+        android:id="@+id/bottom_my_donation"
+        android:title="profile"
+
+        />
+
+
+    <item
+        android:id="@+id/bottom_help"
+        android:title="Cart"
+
+        />
+
+</menu>

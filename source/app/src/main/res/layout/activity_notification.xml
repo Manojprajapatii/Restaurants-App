@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.Notification">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/arrowLeft"
+        android:layout_width="@dimen/m40"
+        android:layout_height="@dimen/m40"
+        android:layout_margin="@dimen/m10"
+        android:layout_marginLeft="@dimen/m10"
+        android:background="@color/white"
+        app:cardCornerRadius="@dimen/m50"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/m10"
+            android:src="@drawable/left_icon"
+            android:textAlignment="center"
+            />
+            <FrameLayout
+                android:id="@+id/fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <com.restaurants.view.BoldTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/m10"
+        android:layout_marginTop="@dimen/m15"
+        android:layout_toRightOf="@+id/arrowLeft"
+        android:text="@string/notification"
+        android:textSize="@dimen/text_16"
+        android:textStyle="bold" />
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/arrowLeft"
+        tools:listitem="@layout/notification_recycler" />
+
+
+
+</RelativeLayout>

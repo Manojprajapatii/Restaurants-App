@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/m120"
+        android:layout_height="@dimen/m120"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/m10"
+        android:scaleType="fitXY"
+        android:src="@drawable/chole"
+        app:shapeAppearanceOverlay="@style/RoundedCorners" />
+
+    <com.restaurants.view.BoldTextView
+        android:id="@+id/imgName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/m5"
+        android:layout_marginTop="@dimen/m20"
+        android:layout_toRightOf="@+id/image"
+        android:text="@string/imgName"
+        android:textSize="@dimen/text_16"
+        android:textStyle="bold" />
+
+    <com.restaurants.view.BoldTextView
+        android:id="@+id/tow_x"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/m10"
+        android:layout_marginTop="@dimen/m20"
+        android:layout_toRightOf="@+id/imgName"
+        android:text="X2"
+        android:textColor="@color/orange"
+        android:textSize="@dimen/text_16"
+        android:textStyle="bold" />
+
+    <com.restaurants.view.BoldTextView
+        android:id="@+id/restaurantName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgName"
+        android:layout_marginStart="@dimen/m5"
+        android:layout_marginTop="@dimen/m10"
+        android:layout_toRightOf="@+id/image"
+        android:text="@string/restaurants_name"
+        android:textSize="@dimen/text_11" />
+
+    <ImageView
+        android:id="@+id/location_img"
+        android:layout_width="@dimen/m15"
+        android:layout_height="@dimen/m15"
+        android:layout_below="@+id/imgName"
+        android:layout_marginTop="@dimen/m10"
+        android:layout_toRightOf="@+id/restaurantName"
+        android:src="@drawable/location_pin"
+        app:tint="@color/green"
+        />
+
+    <com.restaurants.view.BoldTextView
+        android:id="@+id/km"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgName"
+        android:layout_marginTop="@dimen/m10"
+        android:layout_toRightOf="@+id/location_img"
+        android:text="@string/km"
+        android:textSize="@dimen/text_11"
+        android:textColor="@color/green"/>
+
+    <com.restaurants.view.BoldTextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgName"
+        android:layout_marginStart="@dimen/m10"
+        android:layout_marginTop="@dimen/m5"
+        android:layout_toRightOf="@+id/km"
+        android:text="@string/price"
+        android:textSize="@dimen/text_20"
+        android:textStyle="bold" />
+
+    <com.restaurants.view.BoldTextView
+        android:id="@+id/per_plate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/price"
+        android:layout_marginStart="@dimen/m10"
+        android:layout_toRightOf="@+id/km"
+        android:text="@string/per_plate"
+        android:textColor="@color/gray_2"
+        android:textSize="@dimen/text_12"
+        />
+
+    <Button
+        android:id="@+id/cancel_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/m35"
+        android:layout_toRightOf="@+id/image"
+        android:layout_marginTop="@dimen/m30"
+        android:layout_marginLeft="@dimen/m5"
+        android:backgroundTint="@color/gray"
+        android:layout_below="@+id/restaurantName"
+        android:text="@string/cancel"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_12"/>
+
+    <View
+        android:id="@+id/line_3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m1"
+        android:layout_below="@+id/image"
+        android:layout_marginStart="@dimen/m10"
+        android:layout_marginEnd="@dimen/m10"
+        android:background="@color/orange"/>
+
+</RelativeLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.Otp_page">
+
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m250"
+        android:scaleType="fitXY"
+        android:src="@drawable/email_photo" />
+
+    <com.restaurants.view.BoldTextView
+        android:id="@+id/send_otp_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image"
+        android:layout_marginStart="@dimen/m10"
+        android:layout_marginEnd="@dimen/m10"
+        android:layout_marginTop="@dimen/m20"
+        android:text="@string/send_otp_msg"
+        android:textAlignment="center"
+        android:textSize="@dimen/text_18"
+        android:textStyle="bold" />
+
+    <com.restaurants.view.BoldTextView
+        android:id="@+id/check_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/send_otp_msg"
+        android:layout_marginTop="@dimen/m10"
+        android:text="@string/check_msg"
+        android:textAlignment="center"
+        android:textColor="@color/gray_2"
+        android:textSize="@dimen/text_15" />
+
+
+    <com.chaos.view.PinView
+        android:id="@+id/firstPinView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/check_msg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/m20"
+        android:backgroundTint="@color/black"
+        android:cursorVisible="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hint="*"
+        android:inputType="numberPassword"
+        android:itemBackground="@color/gray"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:cursorWidth="2dp"
+        app:itemCount="6"
+        app:itemHeight="48dp"
+        app:itemRadius="@dimen/m10"
+        app:itemSpacing="10dp"
+        app:itemWidth="48dp"
+        app:lineColor="@color/gray"
+        app:lineWidth="2dp"
+        app:viewType="rectangle" />
+
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m60"
+        android:layout_below="@+id/firstPinView"
+        android:layout_margin="@dimen/m20"
+        android:backgroundTint="@color/orange"
+        android:text="@string/btn_next"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_16"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/m20"
+        android:layout_alignParentBottom="true"
+        >
+
+    <com.restaurants.view.BoldTextView
+        android:id="@+id/login_with"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/m20"
+        android:layout_centerHorizontal="true"
+        android:text="@string/dont_msg"/>
+
+        <com.restaurants.view.BoldTextView
+            android:id="@+id/resend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/login_with"
+            android:layout_toRightOf="@+id/login_with"
+            android:text="@string/resend"
+            android:textColor="@color/orange" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line_3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m10"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/m50"
+        android:layout_marginEnd="@dimen/m50"
+        android:background="@color/blue"/>
+
+
+</RelativeLayout>

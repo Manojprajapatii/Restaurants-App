@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/m5"
+    android:background="@color/white">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m260"
+        app:cardCornerRadius="@dimen/m10"
+        app:cardElevation="@dimen/m7">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/image"
+                android:layout_width="@dimen/m150"
+                android:layout_height="@dimen/m150"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="@dimen/m10"
+                android:layout_marginTop="@dimen/m30"
+                android:scaleType="fitXY"
+                android:src="@drawable/chole"
+                app:shapeAppearanceOverlay="@style/RoundedCorners2" />
+
+            <com.restaurants.view.BoldTextView
+                android:id="@+id/food"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/m30"
+                android:layout_marginTop="@dimen/m50"
+                android:layout_toRightOf="@id/image"
+                android:text="@string/food"
+                android:textColor="@color/yellow"
+                android:textSize="@dimen/text_24"
+                android:textStyle="bold" />
+
+            <com.restaurants.view.BoldTextView
+                android:id="@+id/off"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/food"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/m30"
+                android:layout_toRightOf="@id/image"
+                android:text="@string/offer"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_26"
+                android:textStyle="bold" />
+
+            <com.restaurants.view.BoldTextView
+                android:id="@+id/food_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/off"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/m30"
+                android:layout_toRightOf="@id/image"
+                android:text="@string/on_offer"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_20" />
+
+            <!--            <Button-->
+            <!--                android:id="@+id/btn"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_below="@+id/food_order"-->
+            <!--                android:layout_toRightOf="@+id/image"-->
+            <!--                android:layout_centerHorizontal="true"-->
+            <!--                android:text="Button Text"-->
+            <!--                android:layout_marginStart="@dimen/m50"-->
+            <!--                android:layout_marginTop="@dimen/m5"-->
+            <!--                android:textColor="#FFFFFF" />-->
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/m230"
+                android:layout_height="@dimen/m25"
+                android:layout_below="@+id/image"
+                android:layout_marginStart="@dimen/m15"
+                android:layout_marginTop="@dimen/m25"
+                app:cardBackgroundColor="#8D80B5B5"
+                app:cardCornerRadius="@dimen/m10">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.restaurants.view.LightTextView
+                        android:id="@+id/restaurants_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingStart="@dimen/m10"
+                        android:paddingTop="3dp"
+                        android:text="@string/restaurants_name"
+                        android:textAlignment="center"
+                        android:textColor="@color/white" />
+
+                    <ImageView
+                        android:id="@+id/location_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/m20"
+                        android:layout_marginStart="@dimen/m5"
+                        android:layout_marginTop="3dp"
+                        android:layout_toRightOf="@+id/restaurants_name"
+                        android:src="@drawable/location_pin"
+                        app:tint="@color/green" />
+
+                    <com.restaurants.view.LightTextView
+                        android:id="@+id/km"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_toRightOf="@+id/location_img"
+                        android:text="@string/km"
+                        android:textAlignment="center"
+                        android:textColor="@color/green" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

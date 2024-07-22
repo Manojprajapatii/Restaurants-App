@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.YourOrders">
+
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+
+        <RelativeLayout
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/m10">
+
+            <ImageView
+                android:id="@+id/leftarrow"
+                android:layout_width="@dimen/m35"
+                android:layout_height="@dimen/m35"
+                android:src="@drawable/leftarrow" />
+
+            <FrameLayout
+                android:id="@+id/fragmentContainerLeftMenu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+
+            <com.restaurants.view.BoldTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/m10"
+                android:layout_marginTop="@dimen/m5"
+                android:layout_toRightOf="@+id/leftarrow"
+                android:text="@string/Order_details"
+                android:textAlignment="center"
+                android:textSize="@dimen/text_16"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/whiskey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/recycler"
+            android:background="@color/gray">
+
+            <RelativeLayout
+                android:id="@+id/burger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <com.restaurants.view.BoldTextView
+                android:id="@+id/whiskey_burger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/m10"
+                android:padding="@dimen/m10"
+                android:text="@string/whiskey_burger"
+                android:textSize="@dimen/text_15"
+                android:textStyle="bold" />
+
+            <com.restaurants.view.BoldTextView
+                android:id="@+id/x5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/m10"
+                android:layout_toRightOf="@+id/whiskey_burger"
+                android:text="@string/x5"
+                android:textAlignment="center"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/text_15"
+                android:textStyle="bold" />
+            <com.restaurants.view.BoldTextView
+                android:id="@+id/price_burger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/m10"
+                android:layout_alignParentRight="true"
+                android:text="@string/price_burger"
+                android:layout_marginEnd="@dimen/m20"
+                android:textAlignment="center"
+                android:textSize="@dimen/text_15"
+                android:textStyle="bold" />
+
+
+
+                <View
+                    android:id="@+id/line_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/m1"
+                    android:layout_below="@+id/price_burger"
+                    android:layout_marginTop="@dimen/m5"
+                    android:layout_marginStart="@dimen/m10"
+                    android:layout_marginEnd="@dimen/m10"
+                    android:background="@color/white"/>
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/ice"
+                android:layout_below="@+id/burger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.restaurants.view.BoldTextView
+                    android:id="@+id/whiskey_Ice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/m10"
+                    android:padding="@dimen/m10"
+                    android:text="@string/whiskey_Ice"
+                    android:textSize="@dimen/text_15"
+                    android:textStyle="bold" />
+
+                <com.restaurants.view.BoldTextView
+                    android:id="@+id/x5_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/m10"
+                    android:layout_toRightOf="@+id/whiskey_Ice"
+                    android:text="@string/x5"
+                    android:textAlignment="center"
+                    android:textColor="@color/orange"
+                    android:textSize="@dimen/text_15"
+                    android:textStyle="bold" />
+                <com.restaurants.view.BoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/m10"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/price_burger"
+                    android:layout_marginEnd="@dimen/m20"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/text_15"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/line_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/m1"
+                    android:layout_below="@+id/x5_2"
+                    android:layout_marginTop="@dimen/m5"
+                    android:layout_marginStart="@dimen/m10"
+                    android:layout_marginEnd="@dimen/m10"
+                    android:background="@color/white"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/pizza"
+                android:layout_below="@+id/ice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.restaurants.view.BoldTextView
+                    android:id="@+id/whiskey_pizza"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/m10"
+                    android:padding="@dimen/m10"
+                    android:text="@string/whiskey_pizza"
+                    android:textSize="@dimen/text_15"
+                    android:textStyle="bold" />
+
+                <com.restaurants.view.BoldTextView
+                    android:id="@+id/x5_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/m10"
+                    android:layout_toRightOf="@+id/whiskey_pizza"
+                    android:text="@string/x5"
+                    android:textAlignment="center"
+                    android:textColor="@color/orange"
+                    android:textSize="@dimen/text_15"
+                    android:textStyle="bold" />
+                <com.restaurants.view.BoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/m10"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/price_burger"
+                    android:layout_marginEnd="@dimen/m20"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/text_15"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/delivery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/m20"
+            android:layout_below="@+id/whiskey">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.restaurants.view.BoldTextView
+                    android:id="@+id/delivery_instructions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/delivery_instructions"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_15"
+                    />
+
+                <com.restaurants.view.BoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/add_note"
+                    android:layout_alignParentRight="true"
+                    android:textStyle="bold"
+                    android:textColor="@color/orange"
+                    android:textSize="@dimen/text_15"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/m35"
+                    android:inputType="text"
+                    android:layout_marginTop="@dimen/m10"
+                    android:hint="Enter your comment"
+                    android:paddingStart="@dimen/m10"
+                    android:layout_below="@+id/delivery_instructions"
+                    android:background="@color/gray"/>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/total"
+            android:layout_below="@+id/delivery"
+            android:layout_width="match_parent"
+            android:layout_marginStart="@dimen/m20"
+            android:layout_marginEnd="@dimen/m20"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:id="@+id/sub_total1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <com.restaurants.view.BoldTextView
+                android:id="@+id/sub_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sub_total"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_16"
+                />
+
+                <com.restaurants.view.BoldTextView
+                    android:id="@+id/sub_total_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="$195"
+                    android:textStyle="bold"
+                    android:textColor="@color/orange"
+                    android:textSize="@dimen/text_16"
+                    />
+
+                <View
+                    android:id="@+id/line_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/m1"
+                    android:layout_below="@+id/sub_total"
+                    android:layout_marginTop="@dimen/m5"
+                    android:background="@color/gray"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/delivery_cost1"
+                android:layout_below="@+id/sub_total1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.restaurants.view.BoldTextView
+                    android:id="@+id/delivery_cost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/delivery_cost"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_16"
+                    />
+
+                <com.restaurants.view.BoldTextView
+                    android:id="@+id/delivery_cost_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="$5"
+                    android:textStyle="bold"
+                    android:textColor="@color/orange"
+                    android:textSize="@dimen/text_16"
+                    />
+                <View
+                    android:id="@+id/line_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/m1"
+                    android:layout_below="@+id/delivery_cost"
+                    android:layout_marginTop="@dimen/m5"
+                    android:background="@color/gray"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/tex1"
+                android:layout_below="@+id/delivery_cost1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.restaurants.view.BoldTextView
+                    android:id="@+id/tex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tax"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_16"
+                    />
+
+                <com.restaurants.view.BoldTextView
+                    android:id="@+id/tax_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="$1"
+                    android:textStyle="bold"
+                    android:textColor="@color/orange"
+                    android:textSize="@dimen/text_16"
+                    />
+
+                <View
+                    android:id="@+id/line_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/m1"
+                    android:layout_below="@+id/tex"
+                    android:layout_marginTop="@dimen/m5"
+                    android:background="@color/gray"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_below="@+id/tex1"
+                android:id="@+id/grand_total1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.restaurants.view.BoldTextView
+                    android:id="@+id/grand_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/grand_total"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_16"
+                    />
+
+                <com.restaurants.view.BoldTextView
+                    android:id="@+id/grand_total_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="$201"
+                    android:textStyle="bold"
+                    android:textColor="@color/orange"
+                    android:textSize="@dimen/text_16"
+                    />
+
+                <View
+                    android:id="@+id/line_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/m1"
+                    android:layout_below="@+id/grand_total"
+                    android:layout_marginTop="@dimen/m5"
+                    android:background="@color/gray"/>
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/total">
+
+            <Button
+                android:id="@+id/btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/m20"
+                android:backgroundTint="@color/orange"
+                android:layout_marginTop="@dimen/m200"
+                android:text="@string/checkout"
+                android:textColor="@color/white"
+                tools:layout_editor_absoluteX="100dp"
+                tools:layout_editor_absoluteY="100dp" />
+        </RelativeLayout>
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/m300"
+            android:layout_below="@+id/title"
+            android:layout_marginTop="@dimen/m10"
+            tools:listitem="@layout/order_details" />
+    </RelativeLayout>
+
+
+</ScrollView>

@@ -1,0 +1,7 @@
+<resources>
+    <style name="NavDrawerStyle" parent="Widget.Design.NavigationView">
+        <item name="itemIconTint">@color/nav_item_icon_tint</item>
+        <item name="itemTextColor">@color/nav_item_text_color</item>
+        <item name="itemBackground">@drawable/nav_item_background</item>
+    </style>
+</resources>

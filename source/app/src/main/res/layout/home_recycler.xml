@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/m5"
+        android:layout_marginEnd="@dimen/m10"
+        android:layout_marginStart="@dimen/m10">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="@dimen/m10">
+
+            <RelativeLayout
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/foodImg"
+                    android:layout_width="@dimen/m110"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/chole" />
+
+                <com.restaurants.view.BoldTextView
+                    android:id="@+id/planet_grapes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/m12"
+                    android:layout_marginTop="@dimen/m7"
+                    android:layout_toRightOf="@+id/foodImg"
+                    android:text="@string/planet_grapes"
+                    android:textSize="@dimen/text_16"
+                    android:textStyle="bold" />
+
+                <com.restaurants.view.BoldTextView
+                    android:id="@+id/tag_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/planet_grapes"
+                    android:layout_marginStart="@dimen/m12"
+
+                    android:layout_toRightOf="@id/foodImg"
+                    android:text="@string/tag_line"
+                    android:textSize="@dimen/text_12" />
+
+                <ImageView
+                    android:id="@+id/location_pin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/m15"
+                    android:layout_below="@id/tag_line"
+                    android:layout_marginStart="@dimen/m5"
+                    android:layout_marginTop="@dimen/m5"
+                    android:layout_toRightOf="@id/foodImg"
+                    android:src="@drawable/location_pin"
+                    app:tint="@color/green" />
+
+                <com.restaurants.view.BoldTextView
+                    android:id="@+id/pin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tag_line"
+                    android:layout_toRightOf="@id/location_pin"
+                    android:layout_marginTop="@dimen/m5"
+                    android:text="@string/pin"
+                    android:textSize="@dimen/text_11" />
+
+                <com.restaurants.view.BoldTextView
+                    android:id="@+id/km"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tag_line"
+                    android:layout_toRightOf="@+id/pin"
+                    android:layout_marginTop="@dimen/m5"
+                    android:text="@string/km"
+                    android:textAlignment="center"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/text_11"/>
+
+                <ImageView
+                    android:id="@+id/star1"
+                    android:layout_width="@dimen/m15"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/location_pin"
+                    android:layout_marginStart="@dimen/m10"
+                    android:layout_marginTop="@dimen/m15"
+                    android:layout_toRightOf="@id/foodImg"
+                    android:src="@drawable/star"
+                    app:tint="@color/orange" />
+
+                <ImageView
+                    android:id="@+id/star2"
+                    android:layout_width="@dimen/m15"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/location_pin"
+                    android:layout_marginTop="@dimen/m15"
+                    android:layout_toRightOf="@id/star1"
+                    android:src="@drawable/star"
+                    app:tint="@color/orange" />
+
+                <ImageView
+                    android:id="@+id/star3"
+                    android:layout_width="@dimen/m15"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/location_pin"
+                    android:layout_marginTop="@dimen/m15"
+                    android:layout_toRightOf="@id/star2"
+                    android:src="@drawable/star"
+                    app:tint="@color/orange" />
+
+                <ImageView
+                    android:id="@+id/star4"
+                    android:layout_width="@dimen/m15"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/location_pin"
+                    android:layout_marginTop="@dimen/m15"
+                    android:layout_toRightOf="@id/star3"
+                    android:src="@drawable/star"
+                    app:tint="@color/orange" />
+
+                <ImageView
+                    android:id="@+id/star5"
+                    android:layout_width="@dimen/m15"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/location_pin"
+                    android:layout_marginTop="@dimen/m15"
+                    android:layout_toRightOf="@id/star4"
+                    android:src="@drawable/star"
+                    app:tint="@color/gray_2" />
+
+<!--                <com.restaurants.view.BoldTextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/star_ratting"-->
+<!--                    android:layout_toRightOf="@id/foodImg"-->
+<!--                    android:layout_below="@id/star1"-->
+<!--                    android:layout_marginStart="@dimen/m10"-->
+<!--                    android:textColor="@color/orange"-->
+<!--                    />-->
+
+                <Button
+                    android:id="@+id/viewAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/m80"
+                    android:layout_below="@+id/location_pin"
+                    android:layout_marginStart="@dimen/m30"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/star5"
+                    android:layout_marginBottom="@dimen/m5"
+                    android:backgroundTint="@color/orange"
+                    android:text="@string/products"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_10" />
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

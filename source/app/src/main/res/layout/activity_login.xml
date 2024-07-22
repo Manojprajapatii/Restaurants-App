@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.Login">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m230"
+        android:background="@drawable/background_login">
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/chef"
+        android:layout_width="@dimen/m200"
+        android:layout_height="@dimen/m170"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/m130"
+        android:src="@drawable/chef"/>
+
+    <Button
+        android:id="@+id/skip"
+        android:layout_width="@dimen/m80"
+        android:layout_height="@dimen/m40"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/m20"
+        android:backgroundTint="#45FFFFFF"
+        android:text="@string/skip"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_16"/>
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m55"
+        android:layout_below="@id/chef"
+        android:layout_marginStart="@dimen/m20"
+        android:layout_marginTop="@dimen/m40"
+        android:layout_marginEnd="@dimen/m20"
+        app:cardBackgroundColor="@color/gray"
+        app:cardCornerRadius="@dimen/m28">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/m10">
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/code"
+                android:layout_width="@dimen/m150"
+                android:layout_height="@dimen/m35"
+                android:layout_marginStart="-80dp"
+                android:paddingEnd="@dimen/m10"
+                android:layout_marginTop="0dp"
+                android:paddingStart="@dimen/m5"/>
+
+            <EditText
+                android:id="@+id/number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/code"
+                android:hint="@string/hint"
+                android:layout_marginStart="@dimen/m10"
+                android:layout_marginTop="0dp"
+                android:background="@null"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/card1"
+        android:layout_margin="@dimen/m20"
+        android:backgroundTint="@color/orange"
+        android:text="@string/send_otp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_16"/>
+
+
+    <View
+        android:id="@+id/line_1"
+        android:layout_width="@dimen/m150"
+        android:layout_height="@dimen/m1"
+        android:layout_below="@id/btn"
+        android:layout_marginTop="@dimen/m10"
+        android:layout_toLeftOf="@+id/login_with"
+        android:background="@color/gray" />
+
+    <com.restaurants.view.BoldTextView
+        android:id="@+id/login_with"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn"
+        android:layout_marginStart="@dimen/m10"
+        android:layout_centerHorizontal="true"
+        android:text="@string/login_with"/>
+
+    <View
+        android:id="@+id/line_2"
+        android:layout_width="@dimen/m160"
+        android:layout_height="@dimen/m1"
+        android:layout_below="@id/btn"
+        android:layout_marginStart="@dimen/m10"
+        android:layout_marginTop="@dimen/m10"
+        android:layout_toRightOf="@+id/login_with"
+        android:background="@color/gray"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line_1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/m30">
+
+        <ImageView
+            android:id="@+id/facebook"
+            android:layout_width="@dimen/m80"
+            android:layout_height="@dimen/m80"
+            android:layout_marginRight="@dimen/m20"
+            android:layout_toLeftOf="@+id/gmail"
+            android:src="@drawable/facebook"/>
+        <com.restaurants.view.BoldTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/facebook"
+            android:layout_marginRight="@dimen/m40"
+            android:layout_toLeftOf="@+id/email_text"
+            android:text="@string/facebook"
+            android:textSize="@dimen/text_16"
+            />
+
+        <ImageView
+            android:id="@+id/gmail"
+            android:layout_width="@dimen/m80"
+            android:layout_height="@dimen/m80"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/gmail"/>
+        <com.restaurants.view.BoldTextView
+            android:id="@+id/email_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/facebook"
+            android:layout_centerHorizontal="true"
+            android:text="@string/email"
+            android:textSize="@dimen/text_16"
+            />
+
+        <ImageView
+            android:id="@+id/google"
+            android:layout_width="@dimen/m80"
+            android:layout_height="@dimen/m50"
+            android:layout_marginTop="@dimen/m20"
+            android:layout_marginLeft="@dimen/m15"
+            android:layout_toRightOf="@+id/gmail"
+            android:src="@drawable/google"/>
+
+        <com.restaurants.view.BoldTextView
+            android:id="@+id/google_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/google"
+            android:layout_marginTop="@dimen/m10"
+            android:layout_marginStart="@dimen/m50"
+            android:layout_toRightOf="@+id/email_text"
+            android:text="@string/google"
+            android:textSize="@dimen/text_16" />
+
+
+        <View
+            android:id="@+id/line_3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m10"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/m50"
+            android:layout_marginEnd="@dimen/m50"
+            android:background="@color/blue"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+
+

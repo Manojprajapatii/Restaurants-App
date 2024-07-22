@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.Profile">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/top_nav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <RelativeLayout
+                android:id="@+id/profileHeading"
+                android:layout_marginTop="@dimen/m10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.restaurants.view.BoldTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/m10"
+                    android:text="@string/profile"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/text_18"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/userInfo"
+                android:layout_below="@+id/profileHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/profile"
+                    android:layout_width="@dimen/m150"
+                    android:layout_height="@dimen/m150"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/m40"
+                    android:src="@drawable/profile2" />
+
+                <com.restaurants.view.BoldTextView
+                    android:id="@+id/userName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/profile"
+                    android:layout_marginTop="@dimen/m10"
+                    android:text="@string/userName"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/text_22" />
+
+                <com.restaurants.view.BoldTextView
+                    android:id="@+id/gmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/userName"
+                    android:layout_marginTop="@dimen/m5"
+                    android:text="@string/gmail2"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/text_16" />
+
+                <RelativeLayout
+                    android:id="@+id/userDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/m50"
+                    android:layout_below="@+id/gmail">
+
+
+                    <ImageView
+                        android:id="@+id/userDetail"
+                        android:layout_width="@dimen/m50"
+                        android:layout_height="@dimen/m50"
+                        android:layout_marginStart="@dimen/m15"
+                        android:layout_marginTop="@dimen/m20"
+                        android:background="@drawable/rectangle_shape"
+                        android:backgroundTint="#57C53030"
+                        android:padding="@dimen/m15"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/profile"
+                        app:tint="#FF0BCE" />
+
+                    <com.restaurants.view.BoldTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/m20"
+                        android:layout_marginTop="@dimen/m30"
+                        android:layout_toRightOf="@+id/userDetail"
+                        android:text="@string/userDetails"
+                        android:textSize="@dimen/text_14" />
+
+                    <ImageView
+                        android:layout_width="@dimen/m23"
+                        android:layout_height="@dimen/m30"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/m30"
+                        android:layout_marginEnd="@dimen/m30"
+                        android:rotation="180"
+                        android:src="@drawable/left_icon" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/paymentDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/userDetails">
+
+
+                    <ImageView
+                        android:id="@+id/payment"
+                        android:layout_width="@dimen/m50"
+                        android:layout_height="@dimen/m50"
+                        android:layout_marginStart="@dimen/m15"
+                        android:layout_marginTop="@dimen/m20"
+                        android:background="@drawable/rectangle_shape"
+                        android:backgroundTint="#7EFF5722"
+                        android:padding="@dimen/m15"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/payment" />
+
+                    <com.restaurants.view.BoldTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/m20"
+                        android:layout_marginTop="@dimen/m30"
+                        android:layout_toRightOf="@+id/payment"
+                        android:text="@string/payment"
+                        android:textSize="@dimen/text_14" />
+
+                    <ImageView
+                        android:layout_width="@dimen/m23"
+                        android:layout_height="@dimen/m30"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/m30"
+                        android:layout_marginEnd="@dimen/m30"
+                        android:rotation="180"
+                        android:src="@drawable/left_icon" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/contactDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/paymentDetails">
+
+
+                    <ImageView
+                        android:id="@+id/contact"
+                        android:layout_width="@dimen/m50"
+                        android:layout_height="@dimen/m50"
+                        android:layout_marginStart="@dimen/m15"
+                        android:layout_marginTop="@dimen/m20"
+                        android:background="@drawable/rectangle_shape"
+                        android:backgroundTint="#573073C5"
+                        android:padding="@dimen/m15"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/contact" />
+
+                    <com.restaurants.view.BoldTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/m20"
+                        android:layout_marginTop="@dimen/m30"
+                        android:layout_toRightOf="@+id/contact"
+                        android:text="@string/contact"
+                        android:textSize="@dimen/text_14" />
+
+                    <ImageView
+                        android:layout_width="@dimen/m23"
+                        android:layout_height="@dimen/m30"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/m30"
+                        android:layout_marginEnd="@dimen/m30"
+                        android:rotation="180"
+                        android:src="@drawable/left_icon" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/logoutDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/contactDetail">
+
+
+                    <ImageView
+                        android:id="@+id/logout"
+                        android:layout_width="@dimen/m50"
+                        android:layout_height="@dimen/m50"
+                        android:layout_marginStart="@dimen/m15"
+                        android:layout_marginTop="@dimen/m20"
+                        android:background="@drawable/rectangle_shape"
+                        android:backgroundTint="#5746C530"
+                        android:padding="@dimen/m15"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/logout"
+                        app:tint="@color/green" />
+
+                    <com.restaurants.view.BoldTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/m20"
+                        android:layout_marginTop="@dimen/m30"
+                        android:layout_toRightOf="@+id/logout"
+                        android:text="@string/logout"
+                        android:textSize="@dimen/text_14" />
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</ScrollView>

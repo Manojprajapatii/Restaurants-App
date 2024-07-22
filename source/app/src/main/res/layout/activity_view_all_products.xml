@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.ViewAllProducts">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/foodImage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m200"
+            android:scaleType="centerCrop"
+            android:src="@drawable/grapes" />
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="@dimen/m30"
+            android:layout_height="@dimen/m30"
+            android:layout_margin="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/left_icon"
+            app:tint="@android:color/white" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/m150"
+                android:background="@drawable/rounded_corners">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/m35"
+                        android:layout_marginTop="@dimen/m23"
+                        android:text="@string/planet_of_the_grapes"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:textSize="@dimen/text_18"
+                        android:textStyle="bold" />
+
+                    <com.restaurants.view.BoldTextView
+                        android:id="@+id/tagline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/title"
+                        android:layout_marginStart="@dimen/m35"
+                        android:text="@string/tag_line_1_5_km"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textSize="@dimen/text_12" />
+
+
+                    <ImageView
+                        android:id="@+id/location_img"
+                        android:layout_width="@dimen/m15"
+                        android:layout_height="@dimen/m15"
+                        android:layout_below="@+id/title"
+                        android:layout_toRightOf="@+id/tagline"
+                        android:src="@drawable/location_pin"
+                        app:tint="@color/green" />
+
+                    <com.restaurants.view.BoldTextView
+                        android:id="@+id/km"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/title"
+                        android:layout_toRightOf="@+id/location_img"
+                        android:text="@string/km"
+                        android:textColor="@color/green"
+                        android:textSize="@dimen/text_12" />
+
+
+                    <ImageView
+                        android:id="@+id/star1"
+                        android:layout_width="@dimen/m20"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tagline"
+                        android:layout_marginStart="@dimen/m35"
+                        android:layout_marginTop="@dimen/m5"
+                        android:src="@drawable/star"
+                        app:tint="@color/orange" />
+
+                    <ImageView
+                        android:id="@+id/star2"
+                        android:layout_width="@dimen/m20"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tagline"
+                        android:layout_marginTop="@dimen/m5"
+                        android:layout_toRightOf="@id/star1"
+                        android:src="@drawable/star"
+                        app:tint="@color/orange" />
+
+                    <ImageView
+                        android:id="@+id/star3"
+                        android:layout_width="@dimen/m20"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tagline"
+                        android:layout_marginTop="@dimen/m5"
+                        android:layout_toRightOf="@id/star2"
+                        android:src="@drawable/star"
+                        app:tint="@color/orange" />
+
+                    <ImageView
+                        android:id="@+id/star4"
+                        android:layout_width="@dimen/m20"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tagline"
+                        android:layout_marginTop="@dimen/m5"
+                        android:layout_toRightOf="@id/star3"
+                        android:src="@drawable/star"
+                        app:tint="@color/orange" />
+
+                    <ImageView
+                        android:id="@+id/star5"
+                        android:layout_width="@dimen/m20"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tagline"
+                        android:layout_marginTop="@dimen/m5"
+                        android:layout_toRightOf="@id/star4"
+                        android:src="@drawable/star"
+                        app:tint="@color/gray_2" />
+
+                    <View
+                        android:id="@+id/line_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/m1"
+                        android:layout_below="@+id/star5"
+                        android:layout_marginTop="9dp"
+                        android:background="@color/orange" />
+
+                    <HorizontalScrollView
+                        android:id="@+id/itemList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/line_3"
+                        android:padding="8dp"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/all"
+                                android:layout_width="@dimen/m60"
+                                android:layout_height="@dimen/m30"
+                                android:background="@android:color/transparent"
+                                android:padding="0dp"
+                                android:text="@string/all"
+                                android:textColor="@color/blue" />
+
+
+                            <Button
+                                android:layout_width="@dimen/m70"
+                                android:layout_height="@dimen/m30"
+                                android:background="@android:color/transparent"
+                                android:padding="0dp"
+                                android:text="@string/pizza"
+                                android:textColor="@color/gray_2" />
+
+                            <Button
+                                android:layout_width="@dimen/m70"
+                                android:layout_height="@dimen/m30"
+                                android:background="@android:color/transparent"
+                                android:padding="0dp"
+                                android:text="@string/sandwich"
+                                android:textColor="@color/gray_2" />
+
+                            <Button
+                                android:layout_width="@dimen/m70"
+                                android:layout_height="@dimen/m30"
+                                android:background="@android:color/transparent"
+                                android:padding="0dp"
+                                android:text="@string/cookie"
+                                android:textColor="@color/gray_2" />
+
+                            <Button
+                                android:layout_width="@dimen/m90"
+                                android:layout_height="@dimen/m30"
+                                android:background="@android:color/transparent"
+                                android:padding="0dp"
+                                android:text="@string/ice_creams"
+                                android:textColor="@color/gray_2" />
+
+                            <Button
+                                android:layout_width="@dimen/m80"
+                                android:layout_height="@dimen/m30"
+                                android:background="@android:color/transparent"
+                                android:padding="0dp"
+                                android:text="@string/cold_coffee"
+                                android:textColor="@color/gray_2" />
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                    <View
+                        android:id="@+id/line_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/m1"
+                        android:layout_below="@+id/itemList"
+                        android:layout_marginTop="9dp"
+                        android:background="@color/orange" />
+
+                    <RelativeLayout
+                        android:id="@+id/items"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/line_4"
+                        android:layout_margin="@dimen/m10">
+
+                        <RelativeLayout
+                            android:id="@+id/first_line"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/image"
+                                android:layout_width="@dimen/m50"
+                                android:layout_height="@dimen/m50"
+                                android:layout_marginTop="@dimen/m10"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/chole"
+                                app:shapeAppearanceOverlay="@style/RoundedCorners2" />
+
+                            <com.restaurants.view.BoldTextView
+                                android:id="@+id/whiskey_king_burger"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/m7"
+                                android:layout_marginTop="@dimen/m15"
+                                android:layout_toRightOf="@+id/image"
+                                android:text="@string/whiskey_king_burger"
+                                android:textSize="@dimen/text_10"
+                                android:textStyle="bold" />
+
+                            <com.restaurants.view.BoldTextView
+                                android:id="@+id/per_piece"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/whiskey_king_burger"
+                                android:layout_marginStart="@dimen/m7"
+                                android:layout_marginTop="@dimen/m5"
+                                android:layout_toRightOf="@+id/image"
+                                android:text="$15/ per piece"
+                                android:textSize="@dimen/text_10"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/subtraction"
+                                android:layout_width="@dimen/m55"
+                                android:layout_height="@dimen/m45"
+                                android:layout_marginStart="@dimen/m10"
+                                android:layout_marginTop="@dimen/m10"
+                                android:layout_toRightOf="@+id/whiskey_king_burger"
+                                android:backgroundTint="@color/orange"
+                                android:text="-"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_24" />
+
+                            <!-- res/layout/activity_main.xml -->
+                            <Button
+                                android:id="@+id/middle"
+                                android:layout_width="@dimen/m55"
+                                android:layout_height="@dimen/m40"
+                                android:layout_marginStart="@dimen/m5"
+                                android:layout_marginTop="@dimen/m12"
+                                android:layout_toRightOf="@+id/subtraction"
+                                android:background="@drawable/rectangle_shape_desing"
+                                android:text="5"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_13" />
+
+
+
+                            <Button
+                                android:id="@+id/addition"
+                                android:layout_width="@dimen/m55"
+                                android:layout_height="@dimen/m45"
+                                android:layout_marginStart="@dimen/m5"
+                                android:layout_marginTop="@dimen/m10"
+                                android:layout_toRightOf="@+id/middle"
+                                android:backgroundTint="@color/orange"
+                                android:text="+"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_18" />
+
+
+                            <View
+                                android:id="@+id/line_5"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/m1"
+                                android:layout_below="@+id/addition"
+                                android:layout_marginTop="@dimen/m15"
+                                android:layout_marginBottom="@dimen/m10"
+                                android:background="@color/orange" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/second_line"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/first_line">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/image1"
+                                android:layout_width="@dimen/m50"
+                                android:layout_height="@dimen/m50"
+                                android:layout_marginTop="@dimen/m10"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/chole"
+                                app:shapeAppearanceOverlay="@style/RoundedCorners2" />
+
+                            <com.restaurants.view.BoldTextView
+                                android:id="@+id/whiskey_king_burger1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/m7"
+                                android:layout_marginTop="@dimen/m15"
+                                android:layout_toRightOf="@+id/image1"
+                                android:text="@string/whiskey_king_burger"
+                                android:textSize="@dimen/text_10"
+                                android:textStyle="bold" />
+
+                            <com.restaurants.view.BoldTextView
+                                android:id="@+id/per_piece1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/whiskey_king_burger1"
+                                android:layout_marginStart="@dimen/m7"
+                                android:layout_marginTop="@dimen/m5"
+                                android:layout_toRightOf="@+id/image1"
+                                android:text="$15/ per piece"
+                                android:textSize="@dimen/text_10"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/subtraction1"
+                                android:layout_width="@dimen/m55"
+                                android:layout_height="@dimen/m45"
+                                android:layout_marginStart="@dimen/m10"
+                                android:layout_marginTop="@dimen/m10"
+                                android:layout_toRightOf="@+id/whiskey_king_burger1"
+                                android:backgroundTint="@color/orange"
+                                android:text="-"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_24" />
+
+                            <!-- res/layout/activity_main.xml -->
+                            <Button
+                                android:id="@+id/middle1"
+                                android:layout_width="@dimen/m55"
+                                android:layout_height="@dimen/m45"
+                                android:layout_marginStart="@dimen/m5"
+                                android:layout_marginTop="@dimen/m10"
+                                android:layout_toRightOf="@+id/subtraction1"
+                                android:background="@drawable/rectangle_shape_desing"
+                                android:text="5"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_13" />
+
+
+                            <Button
+                                android:id="@+id/addition1"
+                                android:layout_width="@dimen/m55"
+                                android:layout_height="@dimen/m45"
+                                android:layout_marginStart="@dimen/m5"
+                                android:layout_marginTop="@dimen/m10"
+                                android:layout_toRightOf="@+id/middle1"
+                                android:backgroundTint="@color/orange"
+                                android:text="+"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_18" />
+
+                            <View
+                                android:id="@+id/line_6"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/m1"
+                                android:layout_below="@+id/addition1"
+                                android:layout_marginTop="@dimen/m15"
+                                android:layout_marginBottom="@dimen/m10"
+                                android:background="@color/orange" />
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/third_line"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/second_line">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/image2"
+                                android:layout_width="@dimen/m50"
+                                android:layout_height="@dimen/m50"
+                                android:layout_marginTop="@dimen/m10"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/chole"
+                                app:shapeAppearanceOverlay="@style/RoundedCorners2" />
+
+                            <com.restaurants.view.BoldTextView
+                                android:id="@+id/whiskey_king_burger2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/m7"
+                                android:layout_marginTop="@dimen/m15"
+                                android:layout_toRightOf="@+id/image2"
+                                android:text="@string/whiskey_king_burger"
+                                android:textSize="@dimen/text_10"
+                                android:textStyle="bold" />
+
+                            <com.restaurants.view.BoldTextView
+                                android:id="@+id/per_piece2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/whiskey_king_burger2"
+                                android:layout_marginStart="@dimen/m7"
+                                android:layout_marginTop="@dimen/m5"
+                                android:layout_toRightOf="@+id/image2"
+                                android:text="$15/ per piece"
+                                android:textSize="@dimen/text_10"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/subtraction2"
+                                android:layout_width="@dimen/m55"
+                                android:layout_height="@dimen/m45"
+                                android:layout_marginStart="@dimen/m10"
+                                android:layout_marginTop="@dimen/m10"
+                                android:layout_toRightOf="@+id/whiskey_king_burger2"
+                                android:backgroundTint="@color/orange"
+                                android:text="-"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_24" />
+
+                            <!-- res/layout/activity_main.xml -->
+                            <Button
+                                android:id="@+id/middle2"
+                                android:layout_width="@dimen/m55"
+                                android:layout_height="@dimen/m45"
+                                android:layout_marginStart="@dimen/m5"
+                                android:layout_marginTop="@dimen/m10"
+                                android:layout_toRightOf="@+id/subtraction2"
+                                android:background="@drawable/rectangle_shape_desing"
+                                android:text="5"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_13" />
+
+                            <Button
+                                android:id="@+id/addition2"
+                                android:layout_width="@dimen/m55"
+                                android:layout_height="@dimen/m45"
+                                android:layout_marginStart="@dimen/m5"
+                                android:layout_marginTop="@dimen/m10"
+                                android:layout_toRightOf="@+id/middle2"
+                                android:backgroundTint="@color/orange"
+                                android:text="+"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_18" />
+
+                            <View
+                                android:id="@+id/line_7"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/m1"
+                                android:layout_below="@+id/addition2"
+                                android:layout_marginTop="@dimen/m15"
+                                android:layout_marginBottom="@dimen/m10"
+                                android:background="@color/orange" />
+
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/items"
+                        android:layout_marginTop="@dimen/m10">
+
+                        <FrameLayout
+                            android:layout_width="@dimen/m100"
+                            android:layout_height="@dimen/m150"
+                            android:layout_below="@+id/line_4"
+                            android:background="@drawable/rounded_corners_leftside" />
+
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/m110"
+                            android:layout_below="@+id/line_4"
+                            android:layout_marginStart="-50dp"
+                            android:layout_marginTop="@dimen/m18"
+                            android:layout_marginEnd="@dimen/m20"
+                            android:background="@drawable/rounded_card_background"
+                            android:elevation="@dimen/m5">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <com.restaurants.view.BoldTextView
+                                    android:id="@+id/total_price"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="@dimen/m10"
+                                    android:text="@string/total_price"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/text_12" />
+
+                                <com.restaurants.view.BoldTextView
+                                    android:id="@+id/dollar"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/total_price"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="@dimen/m10"
+                                    android:text="@string/price_180"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/text_18" />
+
+
+                                <Button
+                                    android:id="@+id/viewAll"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="@dimen/m40"
+                                    android:layout_below="@+id/dollar"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginStart="@dimen/m30"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="@dimen/m5"
+                                    android:backgroundTint="@color/orange"
+                                    android:text="@string/order_now"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/text_10" />
+
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="@dimen/m70"
+                                    android:layout_height="@dimen/m70"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginStart="@dimen/m30"
+                                    android:layout_marginEnd="@dimen/m10"
+                                    android:padding="@dimen/m10"
+                                    app:cardCornerRadius="@dimen/m35"
+                                    app:cardElevation="5dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <ImageView
+                                            android:id="@+id/cart"
+                                            android:layout_width="@dimen/m30"
+                                            android:layout_height="@dimen/m30"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_centerVertical="true"
+                                            android:src="@drawable/cart"
+                                            app:tint="@color/orange" />
+
+
+                                    </RelativeLayout>
+                                </androidx.cardview.widget.CardView>
+
+                            </RelativeLayout>
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+            </FrameLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</ScrollView>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.Offers">
+
+    <RelativeLayout
+        android:id="@+id/top_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue">
+
+        <ImageView
+            android:id="@+id/location_img"
+            android:layout_width="@dimen/m40"
+            android:layout_height="@dimen/m25"
+            android:layout_marginTop="@dimen/m15"
+            android:src="@drawable/location_pin"
+            app:tint="@color/white" />
+
+        <com.restaurants.view.BoldTextView
+            android:id="@+id/location"
+            android:layout_width="@dimen/m120"
+            android:layout_height="@dimen/m25"
+            android:layout_marginTop="@dimen/m15"
+            android:layout_toRightOf="@+id/location_img"
+            android:text="@string/location_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_14"
+            android:maxLength="15"/>
+
+        <View
+            android:id="@+id/line_3"
+            android:layout_width="@dimen/m120"
+            android:layout_height="@dimen/m1"
+            android:layout_below="@+id/location"
+            android:layout_toRightOf="@+id/location_img"
+            android:background="@color/gray" />
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/card_1"-->
+<!--            android:layout_width="@dimen/m150"-->
+<!--            android:layout_height="@dimen/m40"-->
+<!--            android:layout_marginTop="@dimen/m10"-->
+<!--            android:layout_marginBottom="@dimen/m10"-->
+<!--            android:layout_marginLeft="@dimen/m10"-->
+<!--            android:layout_toRightOf="@+id/location"-->
+<!--            app:cardBackgroundColor="@color/gray_4"-->
+<!--            app:cardCornerRadius="@dimen/m20"-->
+<!--            app:cardElevation="@dimen/m7">-->
+
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent">-->
+
+<!--                <SearchView-->
+<!--                    android:id="@+id/search_icon"-->
+<!--                    android:layout_width="@dimen/m25"-->
+<!--                    android:layout_height="@dimen/m40"-->
+<!--                    android:layout_marginStart="@dimen/m10"-->
+<!--                    />-->
+<!--            <com.restaurants.view.BoldTextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:hint="@string/search_restaurant"-->
+<!--                android:paddingTop="@dimen/m10"-->
+<!--                android:layout_toRightOf="@+id/search_icon"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textSize="@dimen/text_10"-->
+<!--                android:textStyle="bold"/>-->
+
+<!--            </RelativeLayout>-->
+
+<!--        </androidx.cardview.widget.CardView>-->
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_1"
+            android:layout_width="@dimen/m150"
+            android:layout_height="@dimen/m40"
+            android:layout_marginStart="@dimen/m10"
+            android:layout_marginTop="@dimen/m10"
+            android:layout_toRightOf="@+id/location"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="@dimen/m20"
+            android:backgroundTint="@color/gray"
+            android:elevation="@dimen/m10"
+            app:cardCornerRadius="@dimen/m20">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="6dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/search_restaurant"
+                    android:paddingTop="@dimen/m5"
+                    android:paddingBottom="@dimen/m8"
+
+                    android:layout_toRightOf="@+id/search_icon"
+                    android:textSize="@dimen/text_10"
+                    android:background="@color/gray"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/search_icon"
+                    android:layout_width="@dimen/m20"
+                    android:layout_height="@dimen/m20"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="8dp"
+                    android:src="@android:drawable/ic_menu_search"
+                    app:tint="@android:color/black" />
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <ImageView
+            android:id="@+id/notificationBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/m15"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="@dimen/m10"
+            android:src="@drawable/notifications_img" />
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_nav"
+        android:layout_marginTop="@dimen/m10"
+        tools:listitem="@layout/activity_offer_recycler" />
+
+</RelativeLayout>

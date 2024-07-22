@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:background="@color/orange">
+
+    <!-- Header Image -->
+    <ImageView
+        android:id="@+id/header_image"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/profile2"
+        android:layout_gravity="center_vertical"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/m20"
+        android:paddingStart="16dp"
+        android:gravity="center_vertical">
+
+        <!-- User Name -->
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Name"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_16"/>
+    </LinearLayout>
+
+    <!-- Settings Icon -->
+    <ImageView
+        android:id="@+id/settings_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/settings"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="16dp"/>
+
+    <!-- Close Button -->
+    <ImageView
+        android:id="@+id/close_button"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/close"
+        android:layout_gravity="center_vertical"/>
+</LinearLayout>

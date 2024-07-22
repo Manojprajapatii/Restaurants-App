@@ -1,0 +1,51 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_orders"
+            android:icon="@drawable/order"
+            android:title="Your Orders" />
+        <item
+            android:id="@+id/nav_favorites"
+            android:icon="@drawable/heart"
+            android:title="Favorite Orders" />
+        <item
+            android:id="@+id/nav_top_rated"
+            android:icon="@drawable/star"
+            android:title="Top Rated Near You" />
+        <item
+            android:id="@+id/nav_address"
+            android:icon="@drawable/address"
+            android:title="Your Address" />
+        <item
+            android:id="@+id/nav_about_us"
+            android:icon="@drawable/about"
+            android:title="About Us" />
+        <item
+            android:id="@+id/nav_contact_us"
+            android:icon="@drawable/calling"
+            android:title="Contact Us" />
+    </group>
+
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_send_feedback"
+            android:title="Send Feedback" />
+        <item
+            android:id="@+id/nav_rate_us"
+            android:title="Rate Us on the Play Store" />
+        <item
+            android:id="@+id/nav_terms_conditions"
+            android:title="Terms  Conditions" />
+        <item
+            android:id="@+id/nav_privacy_policy"
+            android:title="Privacy Policy" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/logout"
+            android:title="Logout" />
+    </group>
+</menu>

@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".fragment.Cart">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/arrow_left"
+        android:layout_width="@dimen/m40"
+        android:layout_height="@dimen/m40"
+        android:layout_margin="@dimen/m10"
+        android:layout_marginLeft="@dimen/m10"
+        android:background="@color/white"
+        app:cardCornerRadius="@dimen/m50">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/m10"
+            android:src="@drawable/left_icon"
+            android:textAlignment="center"
+
+
+            />
+    </androidx.cardview.widget.CardView>
+
+    <com.restaurants.view.BoldTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/m5"
+        android:layout_marginTop="@dimen/m17"
+        android:layout_toRightOf="@+id/arrow_left"
+        android:text="@string/heading"
+        android:textSize="@dimen/text_16"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/arrow_left"
+        tools:listitem="@layout/food_recycler" />
+</RelativeLayout>
